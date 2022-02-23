@@ -1,0 +1,31 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:pseudoDemo="clr-namespace:PseudoDemo"
+        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        x:Class="PseudoDemo.MainWindow"
+        Title="PseudoDemo">
+    <ListBox VerticalAlignment="Stretch"
+             HorizontalAlignment="Stretch">
+
+        <ListBox.Styles>
+            <Style Selector="ListBoxItem">
+                <Setter Property="Padding" Value="1" />
+            </Style>
+            <Style Selector="pseudoDemo|TestControl:test">
+                <Setter Property="Background" Value="Blue"/>
+            </Style>
+        </ListBox.Styles>
+
+        <ListBoxItem>
+            <pseudoDemo:TestControl />
+        </ListBoxItem>
+        <ListBoxItem>
+            <pseudoDemo:TestControl />
+        </ListBoxItem>
+        <ListBoxItem>
+            <pseudoDemo:TestControl />
+        </ListBoxItem>
+    </ListBox>
+</Window>
